@@ -5,11 +5,12 @@
 ## Installation
 
 ### App
-Open your OS terminal, change the working directory to the project and run the command below:
-(if you already have another app running on port 8000, please find the line `- 8000:8080` and replace 8000 with a free port)
+1. Manually generate a string of random characters and insert it into `.env` file after `SECRET_KEY=`:
+`SECRET_KEY='<your_strting_here>'`
 
+1. Open your OS terminal, change the working directory to the project and run the command below:
+(if you already have another app running on port 8000, please find the line `- 8000:8080` and replace 8000 with a free port):
 `docker-compose -p cbtask up -d --build`
-
 This will install and run the app
 
 ### Postman (optional)
