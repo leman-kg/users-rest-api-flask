@@ -2,8 +2,18 @@ version: '2'
 services:
   api:
     build:
-      context: ./docker/api
+      context: ./api
     volumes:
       - "./api:/app"
     ports:
-      - 8000:8080
+      - 8001:8080
+
+  client:
+    build:
+      context: ./client
+    volumes:
+      - "./client:/app"
+      - "/app/node_modules"
+      - "/app/.next"
+    ports:
+      - 8000:3000

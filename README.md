@@ -9,14 +9,14 @@
 `SECRET_KEY='<your_strting_here>'`
 
 1. Open your OS terminal, change the working directory to the project and run the command below:
-(if you already have another app running on port 8000, please find the line `- 8000:8080` and replace 8000 with a free port):
-`docker-compose -p cbtask up -d --build`
+(if you already have another app running on port 8001, please find the line `- 8001:8080` and replace 8001 with a free port):
+`docker-compose -p usermgmt up -d --build`
 This will install and run the app
 
 ### Postman (optional)
 For your convenience I created the endpoints collection that you can import into your Postman. Just open Postman and import `Users-API.postman_collection.json` file that comes with the project
 ## How to use
-__NOTE 1__: if you changed the port please use it in the steps below instead of 8000.
+__NOTE 1__: if you changed the port please use it in the steps below instead of 8001.
 
 __NOTE 2__: All endpoint specs are described in [API Doc](#api-doc) below
 
@@ -47,7 +47,7 @@ __NOTE 2__: All endpoint specs are described in [API Doc](#api-doc) below
 ```bash
 Method: POST
 Type: FORMDATA
-URL: http://localhost:8000/users/create
+URL: http://localhost:8001/users/create
 ```
 
 ***Body:***
@@ -66,7 +66,7 @@ URL: http://localhost:8000/users/create
 ```bash
 Method: POST
 Type: FORMDATA
-URL: http://localhost:8000/login
+URL: http://localhost:8001/login
 ```
 
 ***Body:***
@@ -83,7 +83,7 @@ URL: http://localhost:8000/login
 ```bash
 Method: GET
 Type:
-URL: http://localhost:8000/users
+URL: http://localhost:8001/users
 ```
 
 ***Query params:***
@@ -100,7 +100,7 @@ URL: http://localhost:8000/users
 ```bash
 Method: GET
 Type:
-URL: http://localhost:8000/users/:id
+URL: http://localhost:8001/users/:id
 ```
 
 ***URL variables:***
@@ -116,7 +116,7 @@ URL: http://localhost:8000/users/:id
 ```bash
 Method: POST
 Type: FORMDATA
-URL: http://localhost:8000/users/update/:id
+URL: http://localhost:8001/users/update/:id
 ```
 
 ***URL variables:***
@@ -138,7 +138,7 @@ URL: http://localhost:8000/users/update/:id
 ```bash
 Method: DELETE
 Type:
-URL: http://localhost:8000/users/delete/:id
+URL: http://localhost:8001/users/delete/:id
 ```
 
 ***URL variables:***
@@ -154,7 +154,7 @@ URL: http://localhost:8000/users/delete/:id
 ```bash
 Method: DELETE
 Type:
-URL: http://localhost:8000/users/purge/:id
+URL: http://localhost:8001/users/purge/:id
 ```
 
 ***URL variables:***
